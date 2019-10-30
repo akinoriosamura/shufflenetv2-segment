@@ -1,0 +1,11 @@
+version: '2.3'
+services:
+  cuda10:
+    build: .
+    volumes:
+      - .:/usr/src/app
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+    container_name: cuda10
+    command: /bin/sh -c "tail -f /dev/null"
