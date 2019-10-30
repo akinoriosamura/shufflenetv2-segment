@@ -1,12 +1,20 @@
 # An efficient solution for semantic segmentation: ShuffleNet V2 with atrous separable convolutions
 ## addtional README
-### use GPU by docker
+### how to use GPU by docker
  - install requirements  
 https://qiita.com/uni-3/items/f5911aaaa538b33f370f  
 https://qiita.com/ttsubo/items/c97173e1f04db3cbaeda  
 
  - create Dockerfile and docker-compose.yml refer to this file  
 
+### run docker
+```
+docker-compose up -d
+docker exec -it cuda10 bash
+(in container)
+pip3 install pipenv
+pipenv install
+```
 
 ##  original README
 We present a computationally efficient approach to semantic segmentation, while achieving a high mean intersection over union (mIOU), 70.33% on Cityscapes challenge. The network proposed is capable of running real-time on mobile devices.
